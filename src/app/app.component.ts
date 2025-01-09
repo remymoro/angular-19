@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { HomepageComponent } from './components/homepage.component';
-import { UsersComponent } from './components/users.component';
+
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +10,9 @@ import { UsersComponent } from './components/users.component';
       <li>Homepage</li>
       <li>Users</li>
     </nav>
-    <app-homepage></app-homepage>
-    <app-users></app-users>
+
+    <router-outlet></router-outlet>
   `,
-  imports: [HomepageComponent, UsersComponent],
+  imports: [RouterOutlet],
 })
 export class AppComponent {}
